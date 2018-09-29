@@ -1,0 +1,82 @@
+body {
+	font-family: -apple-system, BlinkMacSystemFont, opensans, Optima, "Microsoft Yahei", sans-serif;
+	font-weight: lighter;	
+	text-shadow: 1px 1px 1px #F4F4F4;
+}
+
+a {
+	text-decoration: none;
+	color: #0097ee;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #691BF3;
+}
+
+a:focus {
+	outline: 0;
+	text-decoration: none
+}
+
+#whole {
+	margin: 0 auto;
+	max-width: 1300px;
+	display: -webkit-flex;
+	display: flex;
+}
+
+#main {
+	-webkit-flex: 1;
+	flex: 1;
+	width: 600px;
+	background: #EFF1F0;
+	padding-left: 50px;
+}
+
+#description {
+	display: inline-block;
+  min-width: 280px;
+	overflow: auto;
+	padding-right: 40px;
+	padding: 0px 0px 0px 0px;
+	font-size: 0.9em;
+		text-indent: 1.6em; /*一个元素 首行 文本内容之前应该有多少水平空格*/
+		background:  #00BEA5;
+}
+
+#description table{
+	overflow: auto;
+}
+
+td:first-child {
+	text-align: right;
+}
+
+caption {
+	text-align: left;
+	font-size: 1.2em;
+	font-weight: light;
+	line-height: 2em;
+	text-decoration: underline double #1B1B1B;
+}
+
+h1 {
+	text-align: center;
+	color:  #3F86A5;
+}
+
+h2 {
+	display: inline-block;
+	max-width: 400px;
+	background: linear-gradient(to right, #00BEA5, #EFF1F0);
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+ul {
+	list-style-type: square;
+}
