@@ -1,0 +1,18 @@
+h1{
+    font-size:32px;
+    color:orange;
+    color : gray;
+    font-weight:bold;
+    background-color:blue;
+    background-image:url(https://mdn.mozillademos.org/files/13026/fire-ball-icon.png);
+    
+  }
+  p{
+    color:orange;
+    font-family:Georgia;
+    font-style:italic;
+  }
+  
+  li{
+    text-shadow:4px 5px 3px gray;
+  }
