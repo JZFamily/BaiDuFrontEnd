@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+    <style>
+        select {
+            display: none;
+        }
+    </style>
+</head>
+<body>   
+        <input id="name" type="text">    
+        <button id="submit-btn">Submit</button>         
+    <label>
+        <input id="school" name="status" type="radio">
+        School
+    </label>
+    <label>
+        <input id="company" name="status" type="radio">
+        Company
+    </label>
+
+    <select id="school-select">        
+        <option>北京邮电大学</option>
+        <option>黑龙江大学</option>
+        <option>华中科技大学</option>
+    </select>
+
+    <select id="company-select">        
+        <option>百度</option>
+        <option>爱奇艺</option>        
+    </select>
+    <script>
+        document.querySelector("#name").onclick = function()
+        {
+            console.log(document.querySelector("#name").value);
+        }
+        document.onkeydown = function(event)
+        {
+            if(event.keyCode == 27) 
+            {
+                document.querySelector("#name").value = "";
+            }
+            if(event.keyCode == 13)
+            {
+                console.log(document.querySelector("#name").innerHTML);
+            }
+            
+        }
+
+
+        document.getElementById("school").onclick = function()
+        {
+            document.querySelector("#school-select").style.display = "inline";
+            document.querySelector("#company-select").style .display = "none";
+          //  if(this.checked == "checked")
+         //   {
+               
+         //   }
+        }
+        document.getElementById("company").onclick = function()
+        {
+            //if(this.checked == "checked")
+           // {
+                document.querySelector("#school-select").style.display = "none";
+                document.querySelector("#company-select").style .display = "inline";
+           // }
+        }
+    </script>
+</body>
+</html>

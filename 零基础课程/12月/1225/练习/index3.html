@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+        <div id="fade-obj" style="width:300px;height:300px;background:#000"></div>
+        <button id="fade-btn">淡出</button>
+        <script>
+            var fadeobj=document.querySelector("#fade-obj");
+	        var fadebtn=document.querySelector("#fade-btn");
+            function a(t){
+                fadeobj.style.opacity=fadeobj.style.opacity-t;
+            }
+            function b(s){
+                fadebtn.removeAttribute('disabled');
+                fadebtn.innerHTML=s;
+                
+            }
+	
+            fadebtn.onclick=function(){
+                
+                if(fadebtn.innerHTML=="淡出"){
+                    fadeobj.style.opacity = 1;
+                    var interval = setInterval(function(){
+                        a(0.1);
+                        setTimeout(clearInterval,2000,interval);
+                    }, 200);
+                    this.disabled="disabled";
+                    var str="淡入";
+                    setTimeout(b,2000,str);
+                }
+                else{
+                    fadeobj.style.opacity = 0;
+                    var interval = setInterval(function(){
+                        a(-0.1);
+                        setTimeout(clearInterval,5000,interval);
+                    }, 500);
+                    this.disabled="disabled";
+                    var str="淡出";
+                    setTimeout(b,5000,str);
+                }
+            }
+        </script>
+</body>
+</html>
